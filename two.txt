@@ -6,4 +6,6 @@ ________________________________________________________________________________
 
 Answer:
 
+SELECT  CustomerId,  LastName || ', ' || FirstName AS Name, Country FROM Customer WHERE Country = 'Brazil'
+
 
