@@ -1,0 +1,8 @@
+8. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+
+
+__________________________________________________________________________________________________________
+
+Answer:
+
+SELECT Customer.CustomerId, Customer.FirstName || " " || Customer.LastName AS Name, InvoiceId, Total AS InvoiceTotalAmt, Customer.Country, Employee.FirstName || " " || Employee.LastName AS SalesRepName FROM Customer JOIN Invoice ON Customer.CustomerId == Invoice.CustomerId JOIN Employee ON Customer.SupportRepId == Employee.EmployeeId 
