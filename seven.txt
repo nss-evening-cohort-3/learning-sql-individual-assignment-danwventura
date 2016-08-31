@@ -1,0 +1,8 @@
+7. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+
+____________________________________________________________________________________________________
+
+
+Answer:
+
+SELECT Employee.EmployeeId, Employee.FirstName || " " || Employee.LastName AS Employee, InvoiceId, Total, InvoiceDate, CustomerId, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode FROM (SELECT * FROM Invoice JOIN Customer ON Invoice.CustomerId == Customer.CustomerId) JOIN Employee ON SupportRepId == Employee.EmployeeId
