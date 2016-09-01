@@ -12,4 +12,4 @@ Answers:
 
 
 2011 Number of Invoices: SELECT COUNT (*) FROM invoice WHERE InvoiceDate LIKE "2011%"
-2009 Invoice Total Amount: SELECT SUM(Total) FROM(SELECT * FROM Invoice WHERE InvoiceDate LIKE "2011%")
+2011 Invoice Total Amount: SELECT SUM(Total) FROM(SELECT * FROM Invoice WHERE InvoiceDate LIKE "2011%")
