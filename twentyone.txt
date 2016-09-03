@@ -1,0 +1,9 @@
+21. Which sales agent made the most in sales over all?
+
+
+____________________________________________________________________________
+
+
+Answer: 
+
+SELECT Employee.FirstName ||" "|| Employee.LastName AS SalesRep, SUM(Total) AS YearSales FROM Invoice  JOIN Customer ON Invoice.CustomerId == Customer.CustomerId JOIN Employee ON Customer.SupportRepId == Employee.EmployeeId GROUP BY SalesRep LIMIT 1
