@@ -4,3 +4,5 @@
 ________________________________________________________________________________
 
 ANSWER:
+
+SELECT Artist.Name As Artist, COUNT (Quantity) AS NumOfSongsSold FROM InvoiceLine JOIN Invoice ON InvoiceLine.InvoiceId == Invoice.InvoiceId JOIN Track ON InvoiceLine.TrackId == Track.TrackId JOIN Album ON Track.AlbumId == Album.AlbumId JOIN Artist ON Album.ArtistId == Artist.ArtistId GROUP BY Artist ORDER BY NumOfSongsSold DESC LIMIT 3
