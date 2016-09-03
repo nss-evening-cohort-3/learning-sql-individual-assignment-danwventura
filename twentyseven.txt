@@ -1,0 +1,10 @@
+27. Provide a query that shows the most purchased Media Type.
+
+
+_______________________________________________________________________________
+
+
+ANSWER:
+
+
+SELECT MediaType.Name AS Format, COUNT(Quantity) AS Frequency  FROM InvoiceLine JOIN Invoice ON InvoiceLine.InvoiceId == Invoice.InvoiceId JOIN Track ON InvoiceLine.TrackId == Track.TrackId JOIN MediaType ON Track.MediaTypeId == Mediatype.MediaTypeId GROUP BY Format ORDER BY Frequency DESC LIMIT 1

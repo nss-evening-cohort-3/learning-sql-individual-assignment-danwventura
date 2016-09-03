@@ -1,0 +1,12 @@
+23. Provide a query that shows the total sales per country. Which country's customers spent the most?
+
+
+
+____________________________________________________________________________________
+
+
+ANSWER 1: SELECT Invoice.BillingCountry AS Country, SUM(Invoice.Total) AS Total FROM Invoice GROUP BY Country ORDER BY Total DESC
+
+
+
+ANSWER 2: SELECT Invoice.BillingCountry AS Country, SUM(Invoice.Total) AS Total FROM Invoice GROUP BY Country ORDER BY Total DESC LIMIT 1

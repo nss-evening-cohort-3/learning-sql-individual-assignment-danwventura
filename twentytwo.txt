@@ -1,0 +1,10 @@
+22. Provide a query that shows the # of customers assigned to each sales agent.
+
+
+______________________________________________________________________________
+
+
+ANSWER:
+
+SELECT Employee.FirstName ||" "|| Employee.LastName AS Employee, COUNT (*) AS NumOfCustomers FROM Customer JOIN Employee ON Customer.SupportRepId == Employee.EmployeeId GROUP BY Employee
+
