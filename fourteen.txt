@@ -1,0 +1,11 @@
+14. Provide a query that shows the # of invoices per country. HINT: GROUP BY
+
+
+___________________________________________________________________________________________________________
+
+
+
+ANSWER:
+
+
+SELECT BillingCountry, COUNT(*) FROM Invoice GROUP BY Invoice.BillingCountry
