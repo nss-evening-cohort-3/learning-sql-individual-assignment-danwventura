@@ -4,3 +4,5 @@
 ____________________________________________________________________________________
 
 ANSWER:
+
+SELECT Track.Name AS Track, COUNT (Quantity) AS Quantity FROM InvoiceLine JOIN Invoice ON InvoiceLine.InvoiceId == Invoice.InvoiceId JOIN Track ON InvoiceLine.TrackId == Track.TrackId GROUP BY Track ORDER BY Quantity DESC LIMIT 5
