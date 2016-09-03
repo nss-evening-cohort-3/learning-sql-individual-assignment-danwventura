@@ -1,0 +1,11 @@
+2. Provide a query only showing the Customers from Brazil.
+
+
+
+___________________________________________________________________________________________________________
+
+Answer:
+
+SELECT  CustomerId,  LastName || ', ' || FirstName AS Name, Country FROM Customer WHERE Country = 'Brazil'
+
+
