@@ -1,0 +1,9 @@
+13. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+
+
+__________________________________________________________________________________________________________
+
+
+Answer:
+
+SELECT Track.TrackId, Track.Name AS TrackName, Artist.ArtistId, Artist.Name AS ArtistName, InvoiceLineId, InvoiceId, InvoiceLine.UnitPrice, Quantity FROM InvoiceLine JOIN Track ON InvoiceLine.TrackId == Track.TrackId JOIN Album ON Track.AlbumId == Album.AlbumId JOIN Artist ON Album.ArtistId == Artist.ArtistId
