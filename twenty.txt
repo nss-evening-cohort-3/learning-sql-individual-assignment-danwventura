@@ -6,3 +6,4 @@ ________________________________________________________________________________
 
 ANSWER:
 
+SELECT Employee.FirstName ||" "|| Employee.LastName AS SalesRep, SUM(Total) AS YearSales FROM Invoice  JOIN Customer ON Invoice.CustomerId == Customer.CustomerId JOIN Employee ON Customer.SupportRepId == Employee.EmployeeId WHERE InvoiceDate LIKE "2010%" GROUP BY SalesRep LIMIT 1
