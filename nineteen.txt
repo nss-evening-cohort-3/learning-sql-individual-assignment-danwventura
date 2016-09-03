@@ -1,0 +1,10 @@
+19. Which sales agent made the most in sales in 2009? HINT: MAX
+
+
+_________________________________________________________________________
+
+
+
+ANSWER:
+
+SELECT SalesRep, MAX(TotalSales) FROM (SELECT Employee.FirstName ||" "|| Employee.LastName AS SalesRep, SUM(Total) AS TotalSales FROM Invoice JOIN Customer ON Invoice.CustomerId == Customer.CustomerId JOIN Employee ON Customer.SupportRepId == Employee.EmployeeId GROUP BY SalesRep) 
