@@ -7,3 +7,4 @@ ________________________________________________________________________________
 
 ANSWER:
 
+SELECT  Invoice.InvoiceId, COUNT(*) AS NumOfInvoiceLineItems,InvoiceLineId, CustomerId, InvoiceDate, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total FROM Invoice JOIN InvoiceLine ON Invoice.InvoiceId == InvoiceLine.InvoiceId GROUP BY InvoiceLine.InvoiceId
