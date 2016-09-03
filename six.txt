@@ -1,0 +1,9 @@
+6. Provide a query showing the invoices of customers who are from Brazil.
+
+
+_____________________________________________________________________________________________
+
+
+Answer:
+
+SELECT * FROM Invoice JOIN Customer ON Invoice.CustomerId == Customer.CustomerId WHERE BillingCountry = 'Brazil' 

@@ -1,0 +1,15 @@
+9. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+
+
+_________________________________________________________________________________________________________________
+
+
+Answers: 
+
+2009 Number of Invoices: SELECT COUNT (*) FROM invoice WHERE InvoiceDate LIKE "2009%"
+2009 Invoice Total Amount: SELECT SUM(Total) FROM(SELECT * FROM Invoice WHERE InvoiceDate LIKE "2009%")
+
+
+
+2011 Number of Invoices: SELECT COUNT (*) FROM invoice WHERE InvoiceDate LIKE "2011%"
+2011 Invoice Total Amount: SELECT SUM(Total) FROM(SELECT * FROM Invoice WHERE InvoiceDate LIKE "2011%")
